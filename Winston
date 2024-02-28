@@ -1,0 +1,165 @@
+function setup() {
+  createCanvas(600, 600);
+}
+function draw() 
+
+{
+  background(0);
+
+  fill("#FFBF008C"); //coin
+  ellipse(300, 300, 600, 600);
+  ellipse(300, 300, 580, 580);
+  fill("#B9B7B7")
+  ellipse(300, 300, 480, 480);
+  
+  let triangleX = width / 2; // X-coordinate of the triangle's center
+  let triangleY = height / 2; // Y-coordinate of the triangle's center
+  let triangleSize = 300; // Size of the triangle
+  
+  noStroke();
+  fill("#0D1E7D") //cape
+  rect(180,150,240,250);
+  fill(255);
+  rect(181,265,238,60);
+  fill("#EA0730");
+  rect(181,280,238,30);
+  fill(255);
+  triangle(180,400,180,385,195,400);
+  strokeWeight(20);
+  stroke(255);
+  line(190,390,400,205);
+  
+  line(410,390,250,233);
+  fill(255);
+  strokeWeight(0);
+  rect(410,390,10,10);
+
+  strokeWeight(1);
+  fill(0); //body
+  stroke("#FFFFFF");
+  triangle(triangleX - triangleSize / 2, triangleY - triangleSize / 2, // Bottom vertex
+           triangleX + triangleSize / 2, triangleY - triangleSize / 2, // Top left vertex
+           triangleX, triangleY + triangleSize / 2); // Top right vertex
+
+  fill(255);  //eyelashes
+  line(234,219,217,202);
+  line(261,205,257,183);
+  line(338,205,345,183);
+  line(362,217,380,201);
+  
+  fill(255); // eye
+  ellipse(300, 250, 160, 100); 
+  fill("#1D132F");
+
+  stroke("#D82A1D");  //eye veins
+  strokeWeight(3);
+  ellipse(300, 250, 50, 100);
+  line(220,253,230,253);
+  line(230,253,250,245);
+  line(230,230,250,245);
+  line (230,270,240,270);
+  line(240,270,250,245);
+  line(250,245,263,253);
+  line(250,245,270,235);
+  line(250,245,260,235);
+  line(250,280,270,260);
+  line(250,280,250,260)
+  line(250,260,244,260);
+  line(260,235,260,220);
+  line(260,220,267,223);
+  line(263,253,268,245);
+  line(260,270,270,275)
+
+  line(width - 220, 253, width - 230, 253); //for symetry in eye veins
+  line(width - 230, 253, width - 250, 245);
+  line(width - 230, 230, width - 250, 245);
+  line(width - 230, 270, width - 240, 270);
+  line(width - 240, 270, width - 250, 245);
+  line(width - 250, 245, width - 263, 253);
+  line(width - 250, 245, width - 270, 235);
+  line(width - 250, 245, width - 260, 235);
+  line(width - 250, 280, width - 270, 260);
+  line(width - 250, 280, width - 250, 260);
+  line(width - 250, 260, width - 244, 260);
+  line(width - 260, 235, width - 260, 220);
+  line(width - 260, 220, width - 267, 223);
+  line(width - 263, 253, width - 266, 245);
+  line(width - 260, 270, width - 270, 275);
+  
+  stroke("#EBEBEB")
+  strokeWeight(5);
+  fill(255);
+  ellipse (290,236,10,20);
+
+  stroke(0); //legs
+  strokeWeight(10); 
+  line(250, 350, 200, 450); // left leg
+  ellipse(194,450,10,5);
+  line(350, 350, 400, 450); // right leg
+  ellipse(405,450,10,5);
+  
+  stroke(0); //arms
+  strokeWeight(10);
+  line(220, 270, 200, 350); //left arm
+  ellipse(195,350,10,10);
+  noStroke();
+  fill("#763922"); //cigar
+  ellipse(185,350,20,10);
+  fill("#FF1807")
+  ellipse(177,350,5,5);
+  stroke(0);
+  line(380, 270, 420, 300); //right arm
+
+  noStroke(); //smoke for the cigar
+  fill(200, 200, 200, 150);
+  ellipse(180, 350, 10, 10);
+  ellipse(175, 345, 8, 8);
+  ellipse(190, 340, 12, 12);
+
+  
+  stroke(255); //hat
+  strokeWeight(0.4);
+  fill("#3F3E3E");
+  ellipse(300,150,140,45);
+  fill("#3F3E3E");
+  noStroke();
+  fill("#424040");
+  stroke(1);
+  rect(280,80,40,80,60);
+  stroke(255);
+
+  fill("#0D1E7D"); //bowtie
+  triangle(280, 320, 280, 340, 300, 330); // Left part of the bow
+  triangle(320, 320, 320, 340, 300, 330); // Right part of the bow
+  
+    // Draw staff
+  stroke(0);
+  fill(0);
+  strokeWeight(6); // Set stroke weight for the staff
+  line(430, 270, 400, 380); // Staff
+
+  fill("#DD4035")
+  ellipse(430, 270, 30, 30);
+  fill(240);
+  noStroke();
+  ellipse(428, 265, 10, 10);
+  fill(255);
+  ellipse(428, 265, 5, 5);
+  
+  stroke(0); //coin lines
+  strokeWeight(1);
+  line(300,10,300,60);
+  line(300,590,300,540);
+  line(10,300,60,300);
+  line(590,300,540,300);
+  line(90,98,130,130);
+  line(465,475,501,508);
+  line(131,470,98,508);
+  line(476,136,510,99)
+
+
+
+  // Display coordinates
+  fill(255);
+  text("X: " + mouseX + ", Y: " + mouseY, mouseX + 10, mouseY + 10);
+}
